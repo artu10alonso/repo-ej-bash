@@ -14,8 +14,8 @@ mkdir backups
 DATE="$(date)
 
 tar -czvf "$DATE"_"$BU_PATH"_backup.tar.gz backups
-
 TAR_SIZE=$(stat --format =%s $DATE"_"$BU_PATH"_backup.tar.gz)
+mv $DATE"_"$BU_PATH"_backup.tar.gz backups
 
 echo "Se ha comprimido '$BU_PATH" en el archivo '$DATE'_'$BU_PATH_backup.tar.gz"
 echo "Tiene un peso de '$TAR_SIZE'"
